@@ -6,8 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] Rigidbody2D playersRigit;
-    [SerializeField] GameObject player;
-    float speed = 20f, upForce = 300f;
+    [SerializeField] GameObject gun;
+
+    float speed = 10f, upForce = 300f;
     bool playerLeft, playerRight, canJump;
     public bool playerJump;
     // Start is called before the first frame update
@@ -45,6 +46,15 @@ public class PlayerMovement : MonoBehaviour
             playerLeft = false;
         }
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            gun.GetComponent<GunMechanics>().fire = true;
+        }
+        else
+        {
+            gun.GetComponent<GunMechanics>().fire = false;
+        }
+
         if (playerJump)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -61,12 +71,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (playerRight)
         {
-            playersRigit.AddForce(transform.right * speed);
+            if(playersRigit.velocity.x < 5f)
+            {
+                playersRigit.AddForce(transform.right * speed);
+            }
+            
         }
         
         if (playerLeft)
         {
-            playersRigit.AddForce(transform.right * -speed);
+            if (playersRigit.velocity.x > -5f)
+            {
+                playersRigit.AddForce(transform.right * -speed);
+            }
+                
         }
         
         if (!playerRight && !playerLeft)
