@@ -55,10 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\FallOff.cs" />
+    <Compile Include="Assets\Scripts\GunMechanics.cs" />
     <Compile Include="Assets\Scripts\CameraControls.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
-    <Compile Include="Assets\Scripts\GunMechanics.cs" />
+    <Compile Include="Assets\Scripts\SpiderMove.cs" />
+    <Compile Include="Assets\Scripts\BulletMechanics.cs" />
+    <Compile Include="Assets\Scripts\SpiderHealth.cs" />
+    <Compile Include="Assets\Scripts\ElevatorMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             playerRight = true;
+            playersRigit.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else
         {
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             playerLeft = true;
+            playersRigit.gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         else
         {
