@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Rigidbody2D playersRigit;
     [SerializeField] GameObject gun;
-
+    public Vector2 playersDirection;
     float speed = 10f, upForce = 300f;
     bool playerLeft, playerRight, canJump;
     public bool playerJump;
@@ -23,7 +23,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(this.gameObject.GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            playersDirection = new Vector2(1f, 0f);
+
+        }
+        else
+        {
+            if (this.gameObject.GetComponent<Rigidbody2D>().velocity.x < 0)
+            {
+                playersDirection = new Vector2(-1f, 0f);
+
+            }
+        }
         
         
         if (Input.GetKey(KeyCode.RightArrow))
@@ -99,6 +111,9 @@ public class PlayerMovement : MonoBehaviour
             playersRigit.AddForce(transform.up * upForce);
             canJump = false;
         }
+
+        
+
     }
 
 

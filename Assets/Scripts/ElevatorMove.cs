@@ -14,7 +14,7 @@ public class ElevatorMove : MonoBehaviour
         startPos = this.gameObject.transform.position;
         endPos = dest.transform.position;
     }
-
+    
     private void Update()
     {
         if ( Mathf.Abs(this.gameObject.transform.position.y - endPos.y) < 0.1f)

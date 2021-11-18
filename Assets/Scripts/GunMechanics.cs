@@ -32,9 +32,16 @@ public class GunMechanics : MonoBehaviour
     {
         if (readToFire)
         {
+            Transform parent = this.gameObject.transform.parent;
             GameObject temp =  Instantiate(bullet);
+            Vector3 tempScale = temp.transform.localScale;
             temp.transform.position = firePoint.transform.position;
-            temp.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
+            Vector2 bulletVelocity = bulletSpeed * parent.gameObject.GetComponent<PlayerMovement>().playersDirection;
+            if (bulletVelocity.x < 0)
+            {
+                temp.transform.localScale = new Vector3(-tempScale.x, tempScale.y, tempScale.z);
+            }
+            temp.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
             readToFire = false;
             bulletsInMagazine -= 1;
             if(bulletsInMagazine == 0)

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498149289152738343}
   - component: {fileID: 6498149289152738336}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498149289324134271}
   - component: {fileID: 6498149289324134264}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498149289413046110}
   - component: {fileID: 6498149289413046111}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498149289829923392}
   - component: {fileID: 6498149289829923393}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6498149290038916322}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498149290312621629}
   - component: {fileID: 6498149290312621630}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 6498149290500210567}
   - component: {fileID: 6498149290500210561}
   - component: {fileID: 6498149290500210560}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498149290614974978}
   - component: {fileID: 6498149290614974979}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,9 +649,9 @@ GameObject:
   - component: {fileID: 794583500819951626}
   - component: {fileID: 7559902648034371524}
   - component: {fileID: 4864303614970660292}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Elevator
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -685,7 +685,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02349472, y: 2.7016582}
+  m_Offset: {x: 0.02349472, y: 1.2509782}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -696,7 +696,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.309349, y: 5.416625}
+  m_Size: {x: 6.309349, y: 2.515264}
   m_EdgeRadius: 0
 --- !u!50 &7559902648034371524
 Rigidbody2D:
