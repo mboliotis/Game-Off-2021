@@ -23,24 +23,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.gameObject.GetComponent<Rigidbody2D>().velocity.x > 0)
-        {
-            playersDirection = new Vector2(1f, 0f);
-
-        }
-        else
-        {
-            if (this.gameObject.GetComponent<Rigidbody2D>().velocity.x < 0)
-            {
-                playersDirection = new Vector2(-1f, 0f);
-
-            }
-        }
+        float x_rot, y_rot, z_rot;
+        x_rot = playersRigit.gameObject.transform.rotation.x;
+        y_rot = playersRigit.gameObject.transform.rotation.y;
+        z_rot = playersRigit.gameObject.transform.rotation.z;
+        
         
         
         if (Input.GetKey(KeyCode.RightArrow))
         {
             playerRight = true;
+            playersDirection = new Vector2(1f, 0f);
             playersRigit.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else
@@ -48,11 +41,13 @@ public class PlayerMovement : MonoBehaviour
             playerRight = false;
         }
 
+
         
-   
         if (Input.GetKey(KeyCode.LeftArrow))
-        {
+        {   
+            
             playerLeft = true;
+            playersDirection = new Vector2(-1f, 0f);
             playersRigit.gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         else
@@ -60,14 +55,18 @@ public class PlayerMovement : MonoBehaviour
             playerLeft = false;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (gun != null)
         {
-            gun.GetComponent<GunMechanics>().fire = true;
+            if (Input.GetKey(KeyCode.W))
+            {
+                gun.GetComponent<GunMechanics>().fire = true;
+            }
+            else
+            {
+                gun.GetComponent<GunMechanics>().fire = false;
+            }
         }
-        else
-        {
-            gun.GetComponent<GunMechanics>().fire = false;
-        }
+        
 
         if (playerJump)
         {

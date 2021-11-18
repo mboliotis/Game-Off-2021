@@ -6,6 +6,7 @@ public class GunMechanics : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject firePoint;
+    [SerializeField] GameObject player;
     public bool fire;
     bool readToFire;
     int bulletsInMagazine;
@@ -36,7 +37,7 @@ public class GunMechanics : MonoBehaviour
             GameObject temp =  Instantiate(bullet);
             Vector3 tempScale = temp.transform.localScale;
             temp.transform.position = firePoint.transform.position;
-            Vector2 bulletVelocity = bulletSpeed * parent.gameObject.GetComponent<PlayerMovement>().playersDirection;
+            Vector2 bulletVelocity = bulletSpeed * player.GetComponent<PlayerMovement>().playersDirection;
             if (bulletVelocity.x < 0)
             {
                 temp.transform.localScale = new Vector3(-tempScale.x, tempScale.y, tempScale.z);
